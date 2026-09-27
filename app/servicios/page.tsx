@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { ContactBand } from "../components/ContactBand";
-import { services } from "../site-data";
+import { ProcessVideo } from "../components/ProcessVideo";
+import { services, siteData } from "../site-data";
 
 export const metadata: Metadata = { title: "Servicios", description: "Servicios de impresión 3D, autopartes, ingeniería inversa y prototipos de Innova 3D." };
 
@@ -9,6 +10,20 @@ export default function ServicesPage() {
   return (
     <main>
       <section className="page-hero"><span className="section-index">Servicios</span><h1>Soluciones 3D pensadas para funcionar.</h1><p>Revisamos cada necesidad desde su uso real, no solo desde su forma.</p></section>
+      <section className="section video-section reveal-section" aria-labelledby="services-video-title">
+        <div className="video-stage">
+          <ProcessVideo
+            src={siteData.servicesVideoUrl}
+            ariaLabel="Video de los servicios y el proceso de trabajo de Innova 3D"
+          />
+        </div>
+        <div className="video-copy">
+          <span className="section-index">Servicios en acción</span>
+          <h2 id="services-video-title">Mira cómo una necesidad toma forma.</h2>
+          <p>Conoce una parte del proceso detrás de las piezas y soluciones que desarrollamos.</p>
+          <p className="video-note">Del análisis inicial a una pieza que puedes evaluar.</p>
+        </div>
+      </section>
       <section className="section service-list">
         {services.map((service, index) => (
           <article className="service-detail" id={service.slug} key={service.number}>

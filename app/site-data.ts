@@ -6,6 +6,7 @@ export const siteData = {
   address: "Innova 3D Solutions",
   mapEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.746071809393!2d-78.44226242524186!3d0.3448071353213529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d5bdcb447b1ba5%3A0xdf519bd654728988!2sInnova%203D%20Solutions!5e0!3m2!1ses-419!2sec!4v1786647980840!5m2!1ses-419!2sec",
   videoUrl: "/videos/innova-3d-proceso.mp4",
+  servicesVideoUrl: "/videos/innova-3d-servicios.mp4",
 };
 
 const whatsappMessage =

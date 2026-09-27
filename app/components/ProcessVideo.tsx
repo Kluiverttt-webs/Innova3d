@@ -4,9 +4,13 @@ import { useEffect, useRef, useState } from "react";
 
 type ProcessVideoProps = {
   src: string;
+  ariaLabel?: string;
 };
 
-export function ProcessVideo({ src }: ProcessVideoProps) {
+export function ProcessVideo({
+  src,
+  ariaLabel = "Video del proceso de trabajo de Innova 3D",
+}: ProcessVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isMuted, setIsMuted] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -69,7 +73,7 @@ export function ProcessVideo({ src }: ProcessVideoProps) {
         playsInline
         controls
         preload="auto"
-        aria-label="Video del proceso de trabajo de Innova 3D"
+        aria-label={ariaLabel}
         onError={() => setHasError(true)}
         onVolumeChange={(event) => setIsMuted(event.currentTarget.muted)}
       />
